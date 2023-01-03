@@ -1,0 +1,30 @@
+description: babel es6 ve sonraki srümler icin kodları es5 çeviren bir uygulamadır 
+
+
+
+
+BABEL Kullanımı 
+
+1. npm install @babel/cli @babel/core 
+1. @babel/polyfill @babel/preset-env --save-dev
+
+
+2. create .babelrc file
+2.1. push inside {"presets": ["@babel/preset-env"] }
+
+
+3. package.json "scripts": {  "build": "babel src -d lib"},
+4. src klasörü oluştur içerisine dönüşümü yapılacak dosyaları ekle 
+
+4. npm run build 
+
+
+Descrp 
+
+ilk olarak npm üzerinden babel paketlerimizi install ettik
+daha sonra .babelrc klasörünü oluşturarak içerisine yukardaki kodu ekledik
+package.json içerisinde scripts keyine build kısa yolunu ekledik es6 üzerinden yazdığımız
+babel.js babel2.js dosyalarımızı src klasöründe sakladık. 
+babel src -d lib içerisinde çağırdık es5 e dönüşenler lib klasörünün içerisine aktarıldı
+
+
